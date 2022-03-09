@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/drawable/button_circle.xml" value="0.1" />
+        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/drawable/button_circle_gift.xml" value="0.1335" />
+        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/drawable/button_circle_x.xml" value="0.112" />
         <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/layout/gift_fragment.xml" value="0.1" />
         <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/layout/item_pager.xml" value="0.125" />
+        <entry key="..\:/Users/15466/AndroidStudioProjects/LiveStreamApp/app/src/main/res/layout/video_fragment.xml" value="0.25" />
       </map>
     </option>
   </component>

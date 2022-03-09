@@ -16,13 +16,24 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+
         <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/viewPager"
             android:background="@color/teal_200" ></androidx.viewpager2.widget.ViewPager2>
 
-
+        <TextView
+            android:id="@+id/debug_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:text="给Debug"
+            android:textStyle="bold|italic"
+            android:textColor="#696969"
+            android:textSize="20sp" />
 
         <LinearLayout
                 android:id="@+id/LinearLayout1"
@@ -67,6 +78,12 @@
                     android:background="@drawable/button_circle"/>
 
         </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gift_frag">
+        </FrameLayout>
 
     </RelativeLayout>
 
