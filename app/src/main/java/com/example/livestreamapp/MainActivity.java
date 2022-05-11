@@ -7,7 +7,13 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.*;
@@ -28,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements VideoFragment1.Ca
     Fragment gf;
 
     TextView debug_txt;
+    private ImageView img_zan;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements VideoFragment1.Ca
         Button btn2 = findViewById(R.id.btn2);
         Button btn3 = findViewById(R.id.btn3);
         debug_txt = findViewById(R.id.debug_txt);
+        img_zan = (ImageView) findViewById(R.id.img_zan);
+        img_zan.setVisibility(View.INVISIBLE);
+
         btn1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
 
@@ -48,6 +60,21 @@ public class MainActivity extends AppCompatActivity implements VideoFragment1.Ca
 
         btn2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
+                img_zan.setVisibility(View.VISIBLE);
+                AnimationSet animationSet = new AnimationSet(true);
+                TranslateAnimation translateAnimation = new TranslateAnimation(
+                        Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0.5f,
+                        Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, -5.0f);
+                translateAnimation.setDuration(800);
+                animationSet.addAnimation(translateAnimation);
+
+                ScaleAnimation scaleAnimation = new ScaleAnimation(1, 3, 1, 3,
+                        Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                scaleAnimation.setDuration(800);
+                animationSet.addAnimation(scaleAnimation);
+
+                img_zan.startAnimation(animationSet);
+                img_zan.setVisibility(View.GONE);
                 updateLikes();
             }
         });
@@ -105,6 +132,21 @@ public class MainActivity extends AppCompatActivity implements VideoFragment1.Ca
         transaction.commit();
     }
 
+
+    public void updateLikes(){
+         if(cur_index == 0) vf1.setLikes();
+         else if(cur_index == 1) vf2.setLikes();
+         else if(cur_index == 2) vf3.setLikes();
+    }
+
+
+    //Fragments向Activity传参 接口函数
+    public void sendInt_Gift(int x) {
+        if(cur_index == 0) vf1.setGifts(x);
+        else if(cur_index == 1) vf2.setGifts(x);
+        else if(cur_index == 2) vf3.setGifts(x);
+    }
+
     public void hideGiftFragment(){
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if(gf != null){
@@ -118,21 +160,6 @@ public class MainActivity extends AppCompatActivity implements VideoFragment1.Ca
         transaction.commit();
     }
 
-
-
-    public void updateLikes(){
-         if(cur_index == 0) vf1.setLikes();
-         else if(cur_index == 1) vf2.setLikes();
-         else if(cur_index == 2) vf3.setLikes();
-    }
-
-
-    //Fragments向Activity传参
-    public void sendInt_Gift(int x) {
-        if(cur_index == 0) vf1.setGifts(x);
-        else if(cur_index == 1) vf2.setGifts(x);
-        else if(cur_index == 2) vf3.setGifts(x);
-    }
 
     public void sendString1(String strValue) {
 

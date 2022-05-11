@@ -30,10 +30,19 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="15dp"
-            android:text="给Debug"
+            android:text="Debug"
             android:textStyle="bold|italic"
             android:textColor="#696969"
             android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_zan"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="480dp"
+            android:background="@drawable/zan" />
 
         <LinearLayout
                 android:id="@+id/LinearLayout1"
@@ -44,35 +53,35 @@
                 android:gravity="center">
 
             <Button
-                   android:id="@+id/btn1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/btn1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:text="评论"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold|italic"
                     android:textColor="@color/white"
                     android:background="@drawable/button_circle"/>
 
 
             <Button
-                   android:id="@+id/btn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/btn2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:text="点赞"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold|italic"
                     android:textColor="@color/white"
                     android:background="@drawable/button_circle"/>
 
             <Button
                     android:id="@+id/btn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center"
                     android:text="礼物"
-                    android:textSize="20dp"
+                    android:textSize="18dp"
                     android:textStyle="bold|italic"
                     android:textColor="@color/white"
                     android:background="@drawable/button_circle"/>
